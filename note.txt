@@ -1,0 +1,13 @@
+add firebase 
+1. create project in firebase
+2. create file firebase.utils.js
+3. copy config in firebase then paste and code config
+4. inside component -> add signInWithGoogle on event onClick 
+
+handle store user
+1. import in App.js
+2. create state currentUser
+3. in componentDidMount , use method auth.onAuthStateChanged and set state currentUser equal user
+4. close connect how to call method unsubscribeFromAuth with value null
+
+sign out how to call auth.signOut provide by firebase
