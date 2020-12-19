@@ -11,3 +11,7 @@ handle store user
 4. close connect how to call method unsubscribeFromAuth with value null
 
 sign out how to call auth.signOut provide by firebase
+
+sign up
+1. sign up component 
+2. website firebase active authentication
