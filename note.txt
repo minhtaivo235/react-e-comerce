@@ -1,10 +1,11 @@
-add firebase 
+----Firebase
+--add firebase 
 1. create project in firebase
 2. create file firebase.utils.js
 3. copy config in firebase then paste and code config
 4. inside component -> add signInWithGoogle on event onClick 
 
-handle store user
+---handle store user
 1. import in App.js
 2. create state currentUser
 3. in componentDidMount , use method auth.onAuthStateChanged and set state currentUser equal user
@@ -12,6 +13,28 @@ handle store user
 
 sign out how to call auth.signOut provide by firebase
 
-sign up
+--sign up
 1. sign up component 
-2. website firebase active authentication
+    import firebase
+    write function handleSubmit -> create new object
+    render view -> change state with function handleChange
+2. on website firebase -> active authentication
+
+----Redux
+
+---redux setting
+1. npm redux react-redux redux-logger
+2. import Provider redux at index.js and wrap Provider for all
+3. create folder redux
+  -- redux flow
+        Action -> Middleware -> Root Reducer -> Store -> Dom Changes
+4. create user.reducer.js . this is place to store indivitual component
+5. create root-reducer.js . this is place to combine entire component (like user, cart)
+6. create store.js . it have function like middleware. define each action and pass to index.js . it is mission create 1 array to store all of them.
+7. import in index.js . import store from redux. input property store in Provider to use data redux transmit for all.
+8. create actions at dividual component (user.actions.js) . transmit for it entire object received with type: action 
+---redux connect
+1. import connect from redux, setCurrentUser from user.actions.js in app.js
+2. change componentDidMount with setCurrentUser, remove prop in Header component. Change props to variable of redux (currentUser).
+3. write mapDispatchToProps function. mapDispatchToProps have mission is setCurrentUser(setState) -> user.actions.js
+4. export connect() with parameter . the first argument -> init state props . the second argument -> map dispatch to props
