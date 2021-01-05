@@ -1,5 +1,5 @@
-----Firebase
---add firebase 
+-------FIREBASE
+---add firebase 
 1. create project in firebase
 2. create file firebase.utils.js
 3. copy config in firebase then paste and code config
@@ -10,8 +10,7 @@
 2. create state currentUser
 3. in componentDidMount , use method auth.onAuthStateChanged and set state currentUser equal user
 4. close connect how to call method unsubscribeFromAuth with value null
-
-sign out how to call auth.signOut provide by firebase
+5.sign out how to call auth.signOut provide by firebase
 
 --sign up
 1. sign up component 
@@ -20,7 +19,7 @@ sign out how to call auth.signOut provide by firebase
     render view -> change state with function handleChange
 2. on website firebase -> active authentication
 
-----Redux
+----REDUX
 
 ---redux setting
 1. npm redux react-redux redux-logger
@@ -38,3 +37,4 @@ sign out how to call auth.signOut provide by firebase
 2. change componentDidMount with setCurrentUser, remove prop in Header component. Change props to variable of redux (currentUser).
 3. write mapDispatchToProps function. mapDispatchToProps have mission is setCurrentUser(setState) -> user.actions.js
 4. export connect() with parameter . the first argument -> init state props . the second argument -> map dispatch to props
+
